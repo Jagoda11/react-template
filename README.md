@@ -1,12 +1,14 @@
 # 🚀 React TypeScript Template
 
-![License](https://img.shields.io/github/license/Jagoda11/react-template?style=flat-square&color=blue)
 ![Open Issues](https://img.shields.io/github/issues/Jagoda11/react-template?style=flat-square&color=orange)
 ![Last Commit](https://img.shields.io/github/last-commit/Jagoda11/react-template/main?style=flat-square&color=blue)
 ![Build Status](https://github.com/Jagoda11/react-template/actions/workflows/ci.yml/badge.svg?branch=main)
 
-This project includes pre-configured setups for:
+## 📝 Summary
 
+This React TypeScript template is designed for a quick start in new projects. It comes pre-configured with essential tools and libraries to streamline the development process. The template includes:
+
+- React⚛️ for building user interfaces.
 - Babel 🐵
 - TypeScript 🔵
 - ESLint 🛠️
@@ -21,6 +23,7 @@ First, install the project dependencies:
 ```bash
 npm install
 ```
+
 ## ⚠️ Note on Commits
 
 If you're having trouble making a commit, it might be due to the `precommit` hook, which runs the `lint` and `test` scripts before each commit. If these scripts find any errors, the commit will be blocked. Check the output for any lint or test errors and fix them before trying to commit again.
@@ -84,8 +87,6 @@ Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to keep our community appr
 
 ## 📝 License
 
-
 This project is licensed under the terms of the Commercial License Agreement. For more details, see the [LICENSE](LICENSE.md) file.
-
 
 © 2024 Jagoda11
