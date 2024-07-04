@@ -1,7 +1,7 @@
 {
-  "name": "algorithm-practice-extension",
+  "name": "react-template",
   "version": "1.0.0",
-  "description": "chrome extension to practice algorithms",
+  "description": "React template with TypeScript, ESLint, Prettier, Jest, Husky, and TailwindCSS",
   "scripts": {
     "start": "echo '🚀 Starting the app...' && npm run build && node dist/index.js",
     "build": "echo '🔨 Building the app...' && tsc",
@@ -17,15 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jagoda11/algorithm-practice-extension"
+    "url": "git+https://github.com/Jagoda11/react-template"
   },
   "keywords": [],
   "author": "Jagoda11",
   "license": "Proprietary",
   "bugs": {
-    "url": "https://github.com/Jagoda11/algorithm-practice-extension/issues"
+    "url": "https://github.com/Jagoda11/react-template/issues"
   },
-  "homepage": "https://github.com/Jagoda11/algorithm-practice-extension#readme",
+  "homepage": "https://github.com/Jagoda11/react-template#readme",
   "devDependencies": {
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
