@@ -16,6 +16,8 @@ This React TypeScript template is designed for a quick start in new projects. It
 - Jest 🃏
 - Husky 🐶
 
+This setup aims to provide a robust starting point, allowing you to focus on building your application without the hassle of setting up a development environment from scratch.
+
 ## 🚀 Initial Setup
 
 First, install the project dependencies:
@@ -74,7 +76,7 @@ Your development environment is now set up and running in a Docker container in 
 
 ## 💖 Support
 
-If you appreciate my work and would like to support me, consider sponsoring me on [GitHub Sponsors](https://github.com/sponsors/Jagoda11). Your support is greatly appreciated and helps me continue my contributions to open source and volunteer work.
+If you like this hassle-free and easy setup, and if it saved you some time, please consider obtaining a commercial license and sponsoring me on [GitHub Sponsors](https://github.com/sponsors/Jagoda11). Your support is greatly appreciated and helps me continue my contributions to open source and volunteer work.
 
 ## 🤝 Contributing
 
@@ -88,5 +90,4 @@ Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to keep our community appr
 ## 📝 License
 
 This project is licensed under the terms of the Commercial License Agreement. For more details, see the [LICENSE](LICENSE.md) file.
-
 © 2024 Jagoda11
