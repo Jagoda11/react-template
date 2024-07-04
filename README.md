@@ -8,7 +8,7 @@
 
 This React TypeScript template is designed for a quick start in new projects. It comes pre-configured with essential tools and libraries to streamline the development process. The template includes:
 
-- React⚛️ for building user interfaces.
+- React ⚛️ for building user interfaces.
 - Babel 🐵
 - TypeScript 🔵
 - ESLint 🛠️
