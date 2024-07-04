@@ -1,4 +1,4 @@
-# Commercial License Agreement 🔓
+# Commercial License Agreement
 
 Copyright (c) 2024 Jagoda11
 
