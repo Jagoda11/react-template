@@ -1,11 +1,9 @@
-# 🚀 TypeScript Full-Stack Template
+# 🚀 React TypeScript Template
 
-![License](https://img.shields.io/github/license/Jagoda11/my-project-template?style=flat-square&color=blue)
-![Open Issues](https://img.shields.io/github/issues/Jagoda11/my-project-template?style=flat-square&color=orange)
-![Last Commit](https://img.shields.io/github/last-commit/Jagoda11/my-project-template/main?style=flat-square&color=blue)
-![Build Status](https://github.com/Jagoda11/my-project-template/actions/workflows/ci.yml/badge.svg?branch=main)
-
-This project is a template for setting up a full-stack TypeScript application with a Node.js backend 🟩 and your choice of frontend framework: React ⚛️, Angular 🅰️, or Vue 🟢.
+![License](https://img.shields.io/github/license/Jagoda11/react-template?style=flat-square&color=blue)
+![Open Issues](https://img.shields.io/github/issues/Jagoda11/react-template?style=flat-square&color=orange)
+![Last Commit](https://img.shields.io/github/last-commit/Jagoda11/react-template/main?style=flat-square&color=blue)
+![Build Status](https://github.com/Jagoda11/react-template/actions/workflows/ci.yml/badge.svg?branch=main)
 
 This project includes pre-configured setups for:
 
@@ -23,25 +21,6 @@ First, install the project dependencies:
 ```bash
 npm install
 ```
-
-Next, run the `setup-eslint` script to choose your frontend and backend frameworks:
-
-```bash
-npm run setup-eslint
-```
-
-This script will prompt you to choose a frontend framework (React ⚛️, Angular 🅰️, or Vue 🟢), css library and a backend framework is always Node. It will then install the necessary dependencies and configure the project for the chosen frameworks.
-
-> ⚠️ **Important:** After the initial setup, manually delete the `setup-eslint.ts` file and its reference in the `package.json` scripts. Also, don't forget to remove the `FRAMEWORKS_GUIDE.md` file as it is no longer needed. 🗑️
-
-To remove the setup script and its references after the initial setup, you can run the following command in your terminal:
-
-```bash
-
-```
-
-> ⚠️ **Important:** After running the above command, make sure to update your `README.md` file to remove any scripts or references that are no longer needed. Also, remember to update the `CONTRIBUTING.md` file and any other files that contain a GitHub link to this project.
-
 ## ⚠️ Note on Commits
 
 If you're having trouble making a commit, it might be due to the `precommit` hook, which runs the `lint` and `test` scripts before each commit. If these scripts find any errors, the commit will be blocked. Check the output for any lint or test errors and fix them before trying to commit again.
@@ -55,10 +34,6 @@ To run these scripts, use `npm run <script-name>`:
 - `test`: 🧪 Runs tests using Jest and generates a coverage report.
 - `format`: 🖋️ Formats the code using Prettier.
 - `lint`: 🧹 Lints all JavaScript and TypeScript files in the project using ESLint.
-- `lint:root`: 🧹 Lints JavaScript and TypeScript files in the root directory, excluding the `frontend` and `backend` directories.
-- `lint:frontend`: 🧹 Lints JavaScript and TypeScript files in the `frontend` directory.
-- `lint:backend`: 🧹 Lints JavaScript and TypeScript files in the `backend` directory.
-- `setup-eslint`: 🔧 Runs the setup script to choose the frontend and backend frameworks, install the necessary dependencies, and configure the project.
 - `precommit`: 🔒 Runs the `lint` and `test` scripts before each commit to ensure code quality. This is managed by Husky 🐶.
 - `pretest`: 🔍 Lints the code before running tests.
 - `watch`: 👀 Runs tests in watch mode using Jest.
@@ -96,7 +71,7 @@ Your development environment is now set up and running in a Docker container in 
 
 ## 💖 Support
 
-If you appreciate my work and would like to support me, consider sponsoring me on [GitHub Sponsors](https://github.com/sponsors/[YourUsername]). Your support is greatly appreciated and helps me continue my contributions to open source and volunteer work.
+If you appreciate my work and would like to support me, consider sponsoring me on [GitHub Sponsors](https://github.com/sponsors/Jagoda11). Your support is greatly appreciated and helps me continue my contributions to open source and volunteer work.
 
 ## 🤝 Contributing
 
