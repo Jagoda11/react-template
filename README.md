@@ -83,7 +83,9 @@ for details on our code of conduct and the process for submitting pull requests.
 Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to keep our community approachable and respectable.
 
 ## 📝 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the terms of the Commercial License Agreement. For more details, see the [LICENSE](./LICENSE) file.
+
 
 © 2024 Jagoda11
