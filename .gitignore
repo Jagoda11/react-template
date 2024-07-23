@@ -84,6 +84,8 @@ test-results/
 playwright-report/
 jest-report/
 
+.husky/
+
 # Dependency directories
 
 cypress-report/
