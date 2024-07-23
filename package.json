@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React template with TypeScript, ESLint, Prettier, Jest, Husky, and TailwindCSS",
   "scripts": {
-    "start": "echo '🚀 Starting the app...' && npm run build && node dist/index.js",
+    "start": "echo '🚀 Starting the app... Please wait.' && npm run build && echo '✅ Build complete. Launching the app...' && node dist/index.js",
     "build": "echo '🔨 Building the app...' && tsc",
     "test": "echo '🧪 Running tests...' && jest --config jest.config.cjs --coverage",
     "format": "echo '🖋️ Formatting code... Please wait.' && prettier --write . && echo '✅ Your code is formatted!'",
