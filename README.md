@@ -1,5 +1,6 @@
 # 🚀 React TypeScript Template
 
+![License: Commercial](https://img.shields.io/badge/license-Commercial-blue)
 ![Open Issues](https://img.shields.io/github/issues/Jagoda11/react-template?style=flat-square&color=orange)
 ![Last Commit](https://img.shields.io/github/last-commit/Jagoda11/react-template/main?style=flat-square&color=blue)
 ![Build Status](https://github.com/Jagoda11/react-template/actions/workflows/ci.yml/badge.svg?branch=main)
