@@ -4,7 +4,6 @@
 ![Open Issues](https://img.shields.io/github/issues/Jagoda11/react-template?style=flat-square&color=orange)
 ![Last Commit](https://img.shields.io/github/last-commit/Jagoda11/react-template/main?style=flat-square&color=blue)
 ![Build Status](https://github.com/Jagoda11/react-template/actions/workflows/ci.yml/badge.svg?branch=main)
-
 ![React](https://img.shields.io/github/package-json/dependency-version/Jagoda11/react-template/react?label=React)
 ![TypeScript](https://img.shields.io/github/package-json/dependency-version/Jagoda11/react-template/dev/typescript?label=TypeScript)
 
