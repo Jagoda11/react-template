@@ -5,6 +5,9 @@
 ![Last Commit](https://img.shields.io/github/last-commit/Jagoda11/react-template/main?style=flat-square&color=blue)
 ![Build Status](https://github.com/Jagoda11/react-template/actions/workflows/ci.yml/badge.svg?branch=main)
 
+![React](https://img.shields.io/github/package-json/dependency-version/Jagoda11/react-template/react?label=React)
+![TypeScript](https://img.shields.io/github/package-json/dependency-version/Jagoda11/react-template/dev/typescript?label=TypeScript)
+
 ## 📝 Summary
 
 This React TypeScript template is designed for a quick start in new projects. It comes pre-configured with essential tools and libraries to streamline the development process. The template includes:
@@ -92,3 +95,10 @@ Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to keep our community appr
 
 This project is licensed under the terms of the Commercial License Agreement. For more details, see the [LICENSE](LICENSE.md) file.
 © 2024 Jagoda11
+
+## 📖 Related Articles
+
+For more insights and detailed guides, check out these related articles:
+
+- [The Power of Project Templates: Boosting Efficiency in Development](https://medium.com/code-like-a-girl/the-power-of-project-templates-boosting-efficiency-in-development-1a61cb6bcdae)
+- [How to Set Up a Template Repository on GitHub](https://medium.com/new-writers-welcome/how-to-set-up-a-template-repository-on-github-0e7446a46817)
