@@ -4,7 +4,9 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
       },
       "extensions": [
         "eamodio.gitlens",
@@ -14,9 +16,29 @@
         "github.copilot-chat",
         "humao.rest-client",
         "esbenp.prettier-vscode",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "dzannotti.vscode-babel-coloring",
+        "aaron-bond.better-comments",
+        "pranaygp.vscode-css-peek",
+        "ms-azuretools.vscode-docker",
+        "editorconfig.editorconfig",
+        "seatonjiang.gitmoji-vscode",
+        "ecmel.vscode-html-css",
+        "antfu.iconify",
+        "ritwickdey.LiveServer",
+        "ms-vsliveshare.vsliveshare",
+        "christian-kohler.npm-intellisense",
+        "ionutvmi.path-autocomplete",
+        "yoavbls.pretty-ts-errors",
+        "msjsdiag.vscode-react-native",
+        "urbantrout.refactor-css",
+        "simontest.simonte"
       ]
     }
   },
-  "postCreateCommand": "npm install && code --list-extensions"
+  "forwardPorts": [3000, 5000],
+  "postCreateCommand": "npm install -g typescript nodemon && npm install && code --list-extensions",
+  "mounts": [
+    "source=/path/to/local/directory,target=/path/in/container,type=bind"
+  ]
 }
