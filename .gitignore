@@ -85,7 +85,7 @@ playwright-report/
 jest-report/
 
 # Husky hooks directory
-.husky/
+# .husky/
 
 # Dependency directories
 
