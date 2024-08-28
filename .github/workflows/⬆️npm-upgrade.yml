@@ -1,4 +1,4 @@
-ame: 🚀 Dependency Update and Vulnerability Scan
+name: 🚀 Dependency Update and Vulnerability Scan
 
 on:
   schedule:
