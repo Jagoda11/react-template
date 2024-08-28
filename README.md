@@ -6,6 +6,7 @@
 ![Build Status](https://github.com/Jagoda11/react-template/actions/workflows/🚀ci.yml/badge.svg?branch=main)
 ![React](https://img.shields.io/github/package-json/dependency-version/Jagoda11/react-template/react?label=React)
 ![TypeScript](https://img.shields.io/github/package-json/dependency-version/Jagoda11/react-template/dev/typescript?label=TypeScript)
+![Build Status](https://github.com/Jagoda11/react-template/actions/workflows/⬆️npm-upgrade.yml/badge.svg?branch=main)
 
 ## 📝 Summary
 
