@@ -1,6 +1,6 @@
 {
   "name": "react-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React template with TypeScript, ESLint, Prettier, Jest, Husky, and TailwindCSS",
   "scripts": {
     "start": "echo '🚀 Starting the app... Please wait.' && npm run build && echo '✅ Build complete. Launching the app...' && node dist/index.js",
