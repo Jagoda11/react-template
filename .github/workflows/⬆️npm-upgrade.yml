@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: '0 2 * * 0'  # Runs weekly on Sunday at 2 a.m. UTC
   workflow_dispatch:      # Allows manual triggering
-  push:
-    branches:
-      - main
 
 jobs:
   update-and-scan:
