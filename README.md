@@ -22,6 +22,25 @@ This React TypeScript template is designed for a quick start in new projects. It
 
 This setup aims to provide a robust starting point, allowing you to focus on building your application without the hassle of setting up a development environment from scratch.
 
+## 🤖 AI Agent–Optimized Rules
+
+This template is tuned so that both humans and AI agents (for example GitHub Copilot powered by GPT-5.1) can safely read, understand, and modify the code. The most important rules are enforced via [eslint.config.ts](eslint.config.ts):
+
+- **Small, focused units**
+  - `max-lines-per-function`: functions are limited to ~30 logical lines.
+  - `max-lines`: files are limited to ~200 logical lines (excluding comments/blank lines).
+  - `complexity`, `sonarjs/cognitive-complexity`, `max-depth`, `max-nested-callbacks`, and `max-params` keep logic simple and flatten nested control flow.
+- **Strict and explicit TypeScript**
+  - `@typescript-eslint/strict-boolean-expressions`, `no-floating-promises`, and related rules prevent unsafe runtime behaviour.
+  - `@typescript-eslint/no-explicit-any` forces precise typing, which makes code easier to navigate for agents.
+  - Unused variables are forbidden (except intentionally ignored ones prefixed with `_`).
+- **Consistent, searchable structure**
+  - `import/order` enforces grouped and alphabetized imports for predictable file layout.
+  - `@typescript-eslint/naming-convention` keeps types/classes/interfaces in `PascalCase`.
+  - `no-nested-ternary`, `no-negated-condition`, and `no-console` (warn) avoid patterns that reduce readability.
+
+These constraints intentionally bias the codebase toward short, cohesive functions and predictable structure, which in turn makes it easier for AI agents to generate correct, low-risk changes over time as the project grows.
+
 ## 🚀 Initial Setup
 
 First, install the project dependencies:
