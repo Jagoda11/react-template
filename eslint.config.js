@@ -14,7 +14,7 @@ module.exports = [
       parser: parser,
       globals: {
         browser: true,
-        es2021: true,
+        es2024: true,
         jest: true,
       },
     },
