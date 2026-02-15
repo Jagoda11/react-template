@@ -5,7 +5,7 @@ inputs:
   node-version:
     description: '🌐 Node.js version to use'
     required: true
-    default: '21'
+    default: '24'
   install-dependencies:
     description: '📦 Whether to install dependencies'
     required: false
@@ -18,8 +18,8 @@ outputs:
   success-message:
     description: '🎉 Message displayed upon successful execution'
 runs:
-  using: 'node21'
+  using: 'node24'
   main: 'dist/index.js'
 branding:
-  icon: 'react'
+  icon: 'skip-forward'
   color: 'blue'
