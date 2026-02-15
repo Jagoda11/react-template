@@ -21,7 +21,7 @@ outputs:
     description: '🎉 Message displayed upon successful execution'
 runs:
   using: 'node24'
-  main: 'dist/index.js'
+  main: 'dist/src/index.js'
 branding:
   icon: 'skip-forward'
   color: 'blue'
