@@ -41,6 +41,8 @@ This template is tuned so that both humans and AI agents (for example GitHub Cop
 
 These constraints intentionally bias the codebase toward short, cohesive functions and predictable structure, which in turn makes it easier for AI agents to generate correct, low-risk changes over time as the project grows.
 
+For detailed behavior constraints for automated agents, see [AGENT.md](AGENT.md).
+
 ## 🚀 Initial Setup
 
 First, install the project dependencies:

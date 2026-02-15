@@ -99,4 +99,25 @@ When making changes, follow conservative defaults inspired by OWASP guidance:
   - Prefer well-maintained, widely-used libraries over obscure or unmaintained ones.
   - Do not disable or weaken security-related tooling (dependency scanners, CI checks) added to this project.
 
+## 9. Architecture & separation of concerns
+
+Agents must favour a clean, layered design so the project can grow without becoming tangled:
+
+- **Layered responsibilities**
+  - **UI layer** (React components, hooks): render data, handle user interaction, call well-defined functions from lower layers. Avoid direct data shaping beyond trivial mapping/formatting.
+  - **Domain layer** (business logic, types, validation): pure functions, domain types, and schemas that encode the rules of the app. No direct network, storage, or UI code.
+  - **Service / integration layer** (API calls, I/O, gateways): functions that talk to external systems (HTTP, storage, browser APIs) and adapt raw data into domain types.
+- **Folder structure guidance**
+  - Keep domain types and pure logic close to where they are used (for example under `src/types` and future `src/domain/*` modules) and free of React or browser specifics.
+  - Place React-specific code (components, hooks) in clearly named UI modules (for example `src/ui/*`) and keep them thin wrappers over domain logic and services.
+  - Place cross-cutting utilities in small, focused helpers (for example `src/lib/*`) rather than duplicating logic across layers.
+- **Schema-first boundaries (e.g. Zod)**
+  - At any external boundary (network responses, local storage, user input), prefer schema-based validation (for example with Zod or a similar library) before data is passed into the domain layer.
+  - Keep schemas and their derived types in dedicated modules and re-use them across UI and services instead of re-describing shapes in multiple places.
+  - Do not bypass or duplicate validation at call sites; centralize and reuse it.
+- **Import discipline**
+  - Do not import UI code into domain or service layers.
+  - Domain modules must not depend on framework-specific or environment-specific modules (React, DOM, Node-only APIs).
+  - If in doubt, keep the direction of dependencies flowing from UI → services → domain → low-level utilities.
+
 By following these rules, agents help keep this project safe, predictable, and easy to maintain over time.
