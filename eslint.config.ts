@@ -1,20 +1,30 @@
+import eslint from '@eslint/js'
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
 import parser from '@typescript-eslint/parser'
 import importPlugin from 'eslint-plugin-import'
 import jestPlugin from 'eslint-plugin-jest'
 import prettierPlugin from 'eslint-plugin-prettier'
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
-import sonarjsPlugin from 'eslint-plugin-sonarjs'
+import sonarjs from 'eslint-plugin-sonarjs'
 import unicornPlugin from 'eslint-plugin-unicorn'
+import tseslint from 'typescript-eslint'
 
 export default [
+  eslint.configs.recommended,
+  ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
+  eslintPluginPrettierRecommended,
+  importPlugin.flatConfigs.recommended,
+  importPlugin.flatConfigs.typescript,
+  sonarjs.configs?.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
-      parser: parser,
+      parser,
       parserOptions: {
         project: './tsconfig.json',
       },
@@ -30,18 +40,22 @@ export default [
       prettier: prettierPlugin,
       'react-hooks': reactHooksPlugin,
       react: reactPlugin,
-      import: importPlugin,
-      sonarjs: sonarjsPlugin,
       unicorn: unicornPlugin,
     },
     rules: {
+      ...reactPlugin.configs.recommended.rules,
+      ...reactHooksPlugin.configs.recommended.rules,
+
       'prettier/prettier': 'error',
+
       'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
       'react/react-in-jsx-scope': 'off',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
+
       '@typescript-eslint/explicit-module-boundary-types': 'warn',
       '@typescript-eslint/no-explicit-any': 'error',
+
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
@@ -51,6 +65,7 @@ export default [
           ignoreRestSiblings: true,
         },
       ],
+
       '@typescript-eslint/prefer-optional-chain': 'error',
       '@typescript-eslint/no-floating-promises': 'error',
       '@typescript-eslint/strict-boolean-expressions': 'error',
@@ -58,6 +73,7 @@ export default [
       '@typescript-eslint/no-unsafe-call': 'error',
       '@typescript-eslint/no-unsafe-member-access': 'error',
       '@typescript-eslint/no-unsafe-return': 'error',
+
       '@typescript-eslint/naming-convention': [
         'error',
         {
@@ -66,7 +82,6 @@ export default [
         },
       ],
 
-      // Import organization
       'import/order': [
         'error',
         {
@@ -77,8 +92,8 @@ export default [
       ],
       'import/no-unresolved': 'off',
 
-      // Code complexity
       'sonarjs/cognitive-complexity': ['error', 8],
+
       'max-lines': [
         'error',
         { max: 200, skipBlankLines: true, skipComments: true },
@@ -92,10 +107,10 @@ export default [
       'max-nested-callbacks': ['warn', 3],
       'max-params': ['warn', 4],
 
-      // Readability
       'no-nested-ternary': 'error',
       'no-negated-condition': 'error',
       'no-console': 'warn',
+
       'id-length': [
         'error',
         {
@@ -104,11 +119,9 @@ export default [
         },
       ],
 
-      // Unicorn best practices
       'unicorn/no-array-reduce': 'error',
       'unicorn/prefer-node-protocol': 'error',
 
-      // Jest
       'jest/no-disabled-tests': 'warn',
       'jest/no-focused-tests': 'error',
       'jest/no-identical-title': 'error',
@@ -119,6 +132,27 @@ export default [
       },
     },
   },
+
+  {
+    files: ['*.config.cjs', 'webpack.config.cjs'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parser,
+      parserOptions: {
+        project: './tsconfig.json',
+      },
+      globals: {
+        module: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+      },
+    },
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+    },
+  },
+
   {
     ignores: [
       'node_modules/',
