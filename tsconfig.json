@@ -24,6 +24,8 @@
     "src/**/*",
     "test/**/*",
     "*.config.js",
-    "*.config.cjs"
-  ]
+    "*.config.cjs",
+    "*.config.ts"
+  ],
+  "exclude": ["eslint.config.ts"]
 }
