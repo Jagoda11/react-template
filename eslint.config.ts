@@ -164,6 +164,7 @@ export default [
       'public/',
       '*.md',
       '.vscode/',
+      'eslint.config.ts',
     ],
   },
 ]
