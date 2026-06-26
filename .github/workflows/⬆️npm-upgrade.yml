@@ -35,8 +35,12 @@ jobs:
       - name: 🔨 Build
         run: npm run build
 
+      - name: 🧹 Lint (non-blocking)
+        continue-on-error: true
+        run: npm run lint
+
       - name: 🧪 Test with coverage
-        run: npm run test
+        run: npx jest --config jest.config.cjs --coverage
 
       - name: 🎭 Mask Debricked credentials
         run: echo "::add-mask::${{ secrets.DEBRICKED_TOKEN }}"
@@ -61,4 +65,3 @@ jobs:
       - name: 🚀 Push changes
         if: success()
         run: git push
-

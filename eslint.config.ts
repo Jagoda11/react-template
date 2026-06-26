@@ -26,7 +26,7 @@ export default [
       sourceType: 'module',
       parser,
       parserOptions: {
-        project: './tsconfig.json',
+        project: './tsconfig.eslint.json',
       },
       globals: {
         browser: true,
@@ -140,7 +140,7 @@ export default [
       sourceType: 'module',
       parser,
       parserOptions: {
-        project: './tsconfig.json',
+        project: './tsconfig.eslint.json',
       },
       globals: {
         module: 'readonly',
