@@ -35,8 +35,7 @@ jobs:
       - name: 🔨 Build
         run: npm run build
 
-      - name: 🧹 Lint (non-blocking)
-        continue-on-error: true
+      - name: 🧹 Lint
         run: npm run lint
 
       - name: 🧪 Test with coverage
