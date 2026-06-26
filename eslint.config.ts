@@ -1,11 +1,11 @@
 import eslint from '@eslint/js'
+import eslintReact from '@eslint-react/eslint-plugin'
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
 import parser from '@typescript-eslint/parser'
 import importPlugin from 'eslint-plugin-import'
 import jestPlugin from 'eslint-plugin-jest'
 import prettierPlugin from 'eslint-plugin-prettier'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
-import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import sonarjs from 'eslint-plugin-sonarjs'
 import unicornPlugin from 'eslint-plugin-unicorn'
@@ -19,6 +19,7 @@ export default [
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
   sonarjs.configs?.recommended,
+  eslintReact.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
@@ -39,17 +40,13 @@ export default [
       jest: jestPlugin,
       prettier: prettierPlugin,
       'react-hooks': reactHooksPlugin,
-      react: reactPlugin,
       unicorn: unicornPlugin,
     },
     rules: {
-      ...reactPlugin.configs.recommended.rules,
       ...reactHooksPlugin.configs.recommended.rules,
 
       'prettier/prettier': 'error',
 
-      'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
-      'react/react-in-jsx-scope': 'off',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
 
@@ -125,11 +122,6 @@ export default [
       'jest/no-disabled-tests': 'warn',
       'jest/no-focused-tests': 'error',
       'jest/no-identical-title': 'error',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
     },
   },
 
