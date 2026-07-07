@@ -25,7 +25,7 @@
     "test/**/*",
     "*.config.js",
     "*.config.cjs",
-    "./webpack.config.ts",
-    "./eslint.config.ts"
-  ]
+    "*.config.ts"
+  ],
+  "exclude": ["eslint.config.ts"]
 }
