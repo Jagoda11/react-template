@@ -26,7 +26,7 @@ export default [
       sourceType: 'module',
       parser,
       parserOptions: {
-        project: './tsconfig.json',
+        projectService: true,
       },
       globals: {
         browser: true,

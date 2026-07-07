@@ -8,9 +8,10 @@
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit"
   },
-  "typescript.updateImportsOnFileMove.enabled": "always",
+  "js/ts.updateImportsOnFileMove.enabled": "always",
   "eslint.enable": true,
   "eslint.options": {
     "configFile": ".eslintrc.yml"
-  }
+  },
+  "cSpell.words": ["Worktree"]
 }

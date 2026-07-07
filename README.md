@@ -43,13 +43,46 @@ These constraints intentionally bias the codebase toward short, cohesive functio
 
 For detailed behavior constraints for automated agents, see [AGENT.md](AGENT.md).
 
-## 🚀 Initial Setup
+## 🧠 AI Agent Setup (optional)
 
-First, install the project dependencies:
+This repo ships Claude Code configuration:
+
+- `CLAUDE.md` — agent guidance (build/test/architecture)
+- `AGENT.md` — authoritative behavior policy
+- `.claude/settings.json` — per-repo Claude Code permissions + hooks
+- Plugin: [`the-jagoda-toolkit`](https://github.com/Jagoda11/the-jagoda-toolkit) — skills + pre-commit safety hooks
+
+### Install - initial setup
 
 ```bash
+git clone https://github.com/Jagoda11/react-template.git
+cd react-template
 npm install
 ```
+
+Then, for Claude Code users:
+
+1. Install [Claude Code CLI](https://docs.claude.com/claude-code) globally.
+2. Open this repo with Claude Code. It reads `.claude/settings.json`, registers the marketplace `Jagoda11/the-jagoda-toolkit`, and enables the `jc` plugin on first use.
+3. Verify: run `/jc:start` in a Claude Code session — should pre-flight the session.
+
+### Skills (invoke via `/jc:<name>`)
+
+| Skill                 | Purpose                                                          |
+| --------------------- | ---------------------------------------------------------------- |
+| `jc:start`            | Pre-flight — CodeGraph, branch, recent changes, pre-loaded tools |
+| `jc:start-ui`         | `jc:start` + Chrome DevTools check for UI testing                |
+| `jc:prompt`           | Structured task handoff — 5 intake questions before executing    |
+| `jc:review-ai-compat` | AI-agent compatibility audit of changed code                     |
+| `jc:techdebt`         | Review changed files for tech debt lint can't catch              |
+| `jc:verify`           | Run lint, typecheck, test on affected paths only                 |
+
+### Hooks (auto-registered)
+
+- `PreToolUse Bash(git commit*)` — blocks commits on protected branches
+- `PreToolUse Write` — denies `Write` on existing files (use `Edit`)
+- `PostToolUse Edit|Write` — scans written content for secret patterns
+- `PostToolUse Edit|Write` — auto-verify (lint/typecheck) after edits
 
 ## ⚠️ Note on Commits
 
