@@ -1,10 +1,11 @@
-const path = require('node:path')
+import { resolve } from 'node:path'
+import type { Configuration } from 'webpack'
 
-module.exports = {
+const config: Configuration = {
   entry: './src/index.ts',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -16,3 +17,5 @@ module.exports = {
     ],
   },
 }
+
+export default config
