@@ -1,3 +1,4 @@
+import { fixupPluginRules } from '@eslint/compat'
 import eslint from '@eslint/js'
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
 import parser from '@typescript-eslint/parser'
@@ -39,7 +40,7 @@ export default [
       jest: jestPlugin,
       prettier: prettierPlugin,
       'react-hooks': reactHooksPlugin,
-      react: reactPlugin,
+      react: fixupPluginRules(reactPlugin),
       unicorn: unicornPlugin,
     },
     rules: {
