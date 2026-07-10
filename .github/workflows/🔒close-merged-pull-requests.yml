@@ -23,7 +23,7 @@ jobs:
             const pull_request = context.payload.pull_request;
             const repo = context.repo.repo;
             const owner = context.repo.owner;
-            const issues = pull_request.body.match(/#[0-9]+/g) || [];
+            const issues = pull_request.body?.match(/#[0-9]+/g) ?? [];
             for (const issue of issues) {
               const issue_number = issue.replace('#', '');
               await github.rest.issues.update({
