@@ -7,7 +7,7 @@ inputs:
   node-version:
     description: '🌐 Node.js version to use'
     required: true
-    default: '24'
+    default: '26'
   install-dependencies:
     description: '📦 Whether to install dependencies'
     required: false
