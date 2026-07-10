@@ -35,7 +35,7 @@ Husky `precommit` runs `lint` + `test`. Do not bypass with `--no-verify` unless 
 
 ## Architecture
 
-React + TypeScript starter template. Single package. Node pinned by Volta (`node: 25.6.1`).
+React + TypeScript starter template. Single package. Node pinned by Volta (`node: 26.5.0`).
 
 Source layers (per `AGENT.md` §9) must flow **UI → services → domain → utilities**, never reversed.
 
@@ -208,7 +208,7 @@ When a caller hits a validation error, gate, or constraint:
 - Comments: use sparingly — only complex code. Clean code self-explains.
 - Do not overwrite entire files — use `Edit`, not `Write`. `Write` is only for new files.
 - License: Commercial (`LICENSE.md`); copyright Jagoda11
-- Node version pinned by Volta in `package.json` (`node: 25.6.1`)
+- Node version pinned by Volta in `package.json` (`node: 26.5.0`)
 - Action entry: `action.yml` points to `dist/src/index.js` — keep this path on build output changes
 
 ## Named Anti-Patterns

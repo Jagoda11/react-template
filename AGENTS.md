@@ -6,7 +6,7 @@ Human contributors: see `README.md`. Full agent policy: `AGENT.md`. Claude Code 
 
 ## Project Overview
 
-React + TypeScript starter template. Single package, npm. Node pinned by Volta in `package.json` (`node: 25.6.1`). Action entry: `action.yml` points to `dist/src/index.js`.
+React + TypeScript starter template. Single package, npm. Node pinned by Volta in `package.json` (`node: 26.5.0`). Action entry: `action.yml` points to `dist/src/index.js`.
 
 Layout:
 
