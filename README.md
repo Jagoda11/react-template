@@ -45,10 +45,12 @@ For detailed behavior constraints for automated agents, see [AGENT.md](AGENT.md)
 
 ## 🧠 AI Agent Setup (optional)
 
-This repo ships Claude Code configuration:
+This repo ships agent configuration:
 
-- `CLAUDE.md` — agent guidance (build/test/architecture)
-- `AGENT.md` — authoritative behavior policy
+- `CLAUDE.md` — Claude Code guidance (build/test/architecture)
+- `AGENT.md` — authoritative behavior policy (Claude)
+- `AGENTS.md` — cross-agent behavior spec (Codex, other CLIs)
+- `.github/copilot-instructions.md` — GitHub Copilot repo instructions
 - `.claude/settings.json` — per-repo Claude Code permissions + hooks
 - Plugin: [`the-jagoda-toolkit`](https://github.com/Jagoda11/the-jagoda-toolkit) — skills + pre-commit safety hooks
 
